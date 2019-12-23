@@ -1,0 +1,5 @@
+rootProject.name = 'bookreview'
+include 'admin-console'
+include 'core'
+include 'front'
+
