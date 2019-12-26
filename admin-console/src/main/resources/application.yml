@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: catchreview
+  jpa:
+    properties:
+      jadira.usertype.autoRegisterUserTypes: true
+  thymeleaf:
+    cache: false
+    mode: HTML
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 50MB
+  jmx:
+    default-domain: mcp #하나의 톰켓에 여려개의 app을 띄우기 위한 설정
+
+server:
+  servlet:
+    timeout: 3600
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+  use-forward-headers: true
