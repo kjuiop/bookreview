@@ -21,7 +21,7 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
-    group = 'com.catchreview'
+    group = 'net.grovesoft'
     sourceCompatibility = JavaVersion.VERSION_11
 
     configurations {
@@ -39,7 +39,7 @@ subprojects {
          * Spring
          */
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-        implementation 'org.springframework.boot:spring-boot-starter-mail'
+//        implementation 'org.springframework.boot:spring-boot-starter-mail'
         implementation 'org.springframework.boot:spring-boot-starter-security'
         implementation 'org.springframework.boot:spring-boot-starter-web'
 
@@ -62,8 +62,8 @@ subprojects {
          */
 
         runtimeOnly 'com.h2database:h2'
-        //runtimeOnly 'org.postgresql:postgresql'
         implementation 'org.postgresql:postgresql'
+//        implementation 'com.oracle.ojdbc:ojdbc10:19.3.0.0'
         /**
          * Etc
          */
@@ -78,7 +78,6 @@ subprojects {
         implementation "org.apache.commons:commons-compress:1.18"
         annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
         implementation 'com.googlecode.json-simple:json-simple:1.1'
-        compile files('libs/NiceID.jar')
 
         /**
          * File
@@ -86,19 +85,6 @@ subprojects {
         implementation 'com.google.code.gson:gson:2.8.2'
         implementation 'commons-fileupload:commons-fileupload:1.4'
         implementation 'org.apache.tika:tika-core:1.18'
-
-        /**
-         * Excel
-         */
-        implementation 'org.apache.poi:poi:4.1.1'
-        implementation 'org.apache.poi:poi-ooxml:4.1.1'
-
-
-        /**
-         * AWS
-         */
-        implementation 'com.amazonaws:aws-java-sdk-s3:1.11.228'
-        implementation 'com.amazonaws:aws-java-sdk-ses:1.11.228'
 
         /**
          * Test
@@ -155,7 +141,6 @@ project(':admin-console') {
         providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     }
 }
-
 /**
  * IntelliJ update로 인해 설정이 변경된 문제
  * 아래 코드를 이용하여 테스트 하거나, Settings > Build,Execution,Deployment > Build Tools > Gradle > Runner > "Run tests using:" 여기서 설정을 변경해야함.
@@ -165,4 +150,3 @@ project(':admin-console') {
 test {
     useJUnitPlatform()
 }
-
