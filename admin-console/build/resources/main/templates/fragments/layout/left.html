@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div th:fragment="left" th:remove="tag" th:with="YNType = ${T(com.bookreview.core.model.types.YNType)}">
+            <aside class="main-sidebar">
+            </aside>
+        </div>
+    </body>
+</html>

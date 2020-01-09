@@ -44,7 +44,7 @@ subprojects {
         implementation 'org.springframework.boot:spring-boot-starter-web'
 
         /**
-         * Spring Mobile
+         * Spring Mo1bile
          */
         implementation 'org.springframework.mobile:spring-mobile-device:2.0.0.M3'
 

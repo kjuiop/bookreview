@@ -1,9 +1,15 @@
 spring:
   profiles:
     active: catchreview
+    datasource:
+      url: jdbc:h2:tcp://localhost/~/test
+      username: root
+      password: 1234
+      driver-class-name: org.h2.Driver
   jpa:
-    properties:
-      jadira.usertype.autoRegisterUserTypes: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties.hibernate.hbm2ddl.auto: update
+    show-sql: true
   thymeleaf:
     cache: false
     mode: HTML
